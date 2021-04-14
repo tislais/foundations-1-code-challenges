@@ -19,7 +19,8 @@ Output:
 */
 
 export function makeArrayOfNamesWithMap(arr) {
-    return [];
+    const names = arr.map(item => item.name);
+    return names;
 }
 
 /*
@@ -33,7 +34,11 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    const array = arr.map(item => ({
+        ...item,
+        isHungry: true
+    }));
+    return array;
 }
 
 /*
@@ -47,7 +52,11 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const array = arr.map(item => ({
+        ...item,
+        name: (item.name).toUpperCase()
+    }));
+    return array;
 }
 
 
@@ -58,7 +67,8 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    const array = arr.map(item => item.name + item.type)
+    return array;
 }
 
 /*
@@ -84,5 +94,9 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    const array = arr.map(item => [
+        ['name', item.name],
+        ['type', item.type]
+    ])
+    return array;
 }
