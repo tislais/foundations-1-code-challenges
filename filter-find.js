@@ -86,7 +86,8 @@ Output:
 */
 
 export function findTheCheese(arr) {
-    return [];
+    const array = arr.find(item => item.id === 'cheese');
+    return array;
 }
 
 
