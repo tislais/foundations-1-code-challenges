@@ -53,7 +53,8 @@ Output:
 */
 
 export function getAllDairy(arr) {
-    return [];
+    const array = arr.filter(item => item.category === 'dairy');
+    return array;
 }
 
 /*
