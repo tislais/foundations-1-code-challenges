@@ -38,8 +38,6 @@ export function makeArrayWithIsHungry(arr) {
         ...item,
         isHungry: true
     }));
-
-
     return array;
 }
 
@@ -54,7 +52,11 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const array = arr.map(item => ({
+        ...item,
+        name: (item.name).toUpperCase()
+    }));
+    return array;
 }
 
 
